@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to da Game! Find a pair of matching Numbers to start... I'm waiting...</title>
+	<style type="text/css">
+		body{font-family: sans-serif;font-size: 15px;font-weight: 100;}
+		div#points_area{margin-top: 25px;text-align:center;font-weight: 900;}
+		table{margin: 25px auto;border: 3px solid #222;}
+		td{height: 50px;width: 50px;text-align:center;font-weight: 900;background: #222;color: #fff;}
+        div#prot_area{border:3px solid #222;padding: 10px 10px 10px 10px;margin: 0 auto;height: 130px!important;max-height: 130px!important;overflow: auto;width: 520px;text-align:left;line-height: 12px; font-size: 11px;font-weight: 100;background: #fff;color: #222;}
+		td:hover{cursor: pointer;}
+		a:link,a:visited,a:active{color:#222;text-decoration:none;}
+		a:hover{color:#ff0066;text-decoration:none;}
+	</style>
+</head>
+<body>
+	<div id="points_area"><span id="points">0</span> Points | <a href="index.html">New Game</a> | <a href="" id="playforme">Play for me</a></div>
+	<table id="game" border="0">
+		<tr>
+			<td class="cell" id="id-1-1"></td>
+			<td class="cell" id="id-1-2"></td>
+			<td class="cell" id="id-1-3"></td>
+			<td class="cell" id="id-1-4"></td>
+			<td class="cell" id="id-1-5"></td>
+			<td class="cell" id="id-1-6"></td>
+			<td class="cell" id="id-1-7"></td>
+			<td class="cell" id="id-1-8"></td>
+			<td class="cell" id="id-1-9"></td>
+			<td class="cell" id="id-1-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-2-1"></td>
+			<td class="cell" id="id-2-2"></td>
+			<td class="cell" id="id-2-3"></td>
+			<td class="cell" id="id-2-4"></td>
+			<td class="cell" id="id-2-5"></td>
+			<td class="cell" id="id-2-6"></td>
+			<td class="cell" id="id-2-7"></td>
+			<td class="cell" id="id-2-8"></td>
+			<td class="cell" id="id-2-9"></td>
+			<td class="cell" id="id-2-10"></td>
+		<tr>
+			<td class="cell" id="id-3-1"></td>
+			<td class="cell" id="id-3-2"></td>
+			<td class="cell" id="id-3-3"></td>
+			<td class="cell" id="id-3-4"></td>
+			<td class="cell" id="id-3-5"></td>
+			<td class="cell" id="id-3-6"></td>
+			<td class="cell" id="id-3-7"></td>
+			<td class="cell" id="id-3-8"></td>
+			<td class="cell" id="id-3-9"></td>
+			<td class="cell" id="id-3-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-4-1"></td>
+			<td class="cell" id="id-4-2"></td>
+			<td class="cell" id="id-4-3"></td>
+			<td class="cell" id="id-4-4"></td>
+			<td class="cell" id="id-4-5"></td>
+			<td class="cell" id="id-4-6"></td>
+			<td class="cell" id="id-4-7"></td>
+			<td class="cell" id="id-4-8"></td>
+			<td class="cell" id="id-4-9"></td>
+			<td class="cell" id="id-4-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-5-1"></td>
+			<td class="cell" id="id-5-2"></td>
+			<td class="cell" id="id-5-3"></td>
+			<td class="cell" id="id-5-4"></td>
+			<td class="cell" id="id-5-5"></td>
+			<td class="cell" id="id-5-6"></td>
+			<td class="cell" id="id-5-7"></td>
+			<td class="cell" id="id-5-8"></td>
+			<td class="cell" id="id-5-9"></td>
+			<td class="cell" id="id-5-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-6-1"></td>
+			<td class="cell" id="id-6-2"></td>
+			<td class="cell" id="id-6-3"></td>
+			<td class="cell" id="id-6-4"></td>
+			<td class="cell" id="id-6-5"></td>
+			<td class="cell" id="id-6-6"></td>
+			<td class="cell" id="id-6-7"></td>
+			<td class="cell" id="id-6-8"></td>
+			<td class="cell" id="id-6-9"></td>
+			<td class="cell" id="id-6-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-7-1"></td>
+			<td class="cell" id="id-7-2"></td>
+			<td class="cell" id="id-7-3"></td>
+			<td class="cell" id="id-7-4"></td>
+			<td class="cell" id="id-7-5"></td>
+			<td class="cell" id="id-7-6"></td>
+			<td class="cell" id="id-7-7"></td>
+			<td class="cell" id="id-7-8"></td>
+			<td class="cell" id="id-7-9"></td>
+			<td class="cell" id="id-7-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-8-1"></td>
+			<td class="cell" id="id-8-2"></td>
+			<td class="cell" id="id-8-3"></td>
+			<td class="cell" id="id-8-4"></td>
+			<td class="cell" id="id-8-5"></td>
+			<td class="cell" id="id-8-6"></td>
+			<td class="cell" id="id-8-7"></td>
+			<td class="cell" id="id-8-8"></td>
+			<td class="cell" id="id-8-9"></td>
+			<td class="cell" id="id-8-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-9-1"></td>
+			<td class="cell" id="id-9-2"></td>
+			<td class="cell" id="id-9-3"></td>
+			<td class="cell" id="id-9-4"></td>
+			<td class="cell" id="id-9-5"></td>
+			<td class="cell" id="id-9-6"></td>
+			<td class="cell" id="id-9-7"></td>
+			<td class="cell" id="id-9-8"></td>
+			<td class="cell" id="id-9-9"></td>
+			<td class="cell" id="id-9-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-10-1"></td>
+			<td class="cell" id="id-10-2"></td>
+			<td class="cell" id="id-10-3"></td>
+			<td class="cell" id="id-10-4"></td>
+			<td class="cell" id="id-10-5"></td>
+			<td class="cell" id="id-10-6"></td>
+			<td class="cell" id="id-10-7"></td>
+			<td class="cell" id="id-10-8"></td>
+			<td class="cell" id="id-10-9"></td>
+			<td class="cell" id="id-10-10"></td>
+		</tr>
+	</table>
+    
+    <div id="prot_area" style="height:150px!important;max-height:150px!important;overflow:auto!important;">
+        <p>Welcome to da Game! Find a pair of Numbers to start... I'm waiting...</p>
+    </div>
+
+<script type="text/javascript" src="./jquery.js"></script>
+<script>
+    use: 'strict';
+	;Array.prototype.shuffle = function ()
+    {
+	    var i = this.length, j, temp;
+	    if (i == 0) return;
+	    while (--i)
+        {
+	        j          = Math.floor(Math.random()*(i + 1));
+	        temp       = this[i];
+	        this[i]    = this[j];
+	        this[j]    = temp;
+	    }
+	};
+	;cleanUp = function ()
+	{
+		var FIELDS = ['1-1','1-2','1-3','1-4','1-5','1-6','1-7','1-8','1-9','1-10','2-1','2-2','2-3','2-4','2-5','2-6','2-7','2-8','2-9','2-10','3-1','3-2','3-3','3-4','3-5','3-6','3-7','3-8','3-9','3-10','4-1','4-2','4-3','4-4','4-5','4-6','4-7','4-8','4-9','4-10','5-1','5-2','5-3','5-4','5-5','5-6','5-7','5-8','5-9','5-10','6-1','6-2','6-3','6-4','6-5','6-6','6-7','6-8','6-9','6-10','7-1','7-2','7-3','7-4','7-5','7-6','7-7','7-8','7-9','7-10','8-1','8-2','8-3','8-4','8-5','8-6','8-7','8-8','8-9','8-10','9-1','9-2','9-3','9-4','9-5','9-6','9-7','9-8','9-9','9-10','10-1','10-2','10-3','10-4','10-5','10-6','10-7','10-8','10-9','10-10'];
+		var BOMBS = [];
+        $.each(FIELDS, function(index, value)
+			{
+				if($('#id-' + value).css('background-color') == 'rgb(255, 0, 102)')
+				{
+					BOMBS.push(value);
+				}
+			}
+		);
+		$.each(BOMBS, function(index, value)
+			{
+				var INDEX 	= value.split('-');
+				var ROW 	= INDEX[0];
+				var CELL 	= INDEX[1];
+				for (i = ROW; i >= 1; i--) 
+				{
+					var NEW_ROW         = i;
+					var content         = $('#id-' + i + '-' + CELL).html();
+					var SUB_ROW         = (Number(i) - 1);
+                    var CONTENT_SUB_ROW = $('#id-' + SUB_ROW + '-' + CELL).html();
+					if(typeof CONTENT_SUB_ROW == 'undefined' || CONTENT_SUB_ROW == ''){
+                        CONTENT_SUB_ROW = '';
+                    }
+                    $('#id-' + i + '-' + CELL).html(CONTENT_SUB_ROW);
+					$('#id-' + SUB_ROW + '-' + CELL).html('');
+				};
+			}
+		);
+		$.each(FIELDS, function(index, value)
+			{
+				$('#id-' + value).css('background-color','rgb(34, 34, 34)');
+			}
+		);
+		var z = 0;
+		$.each(FIELDS, function(index, value) 
+			{
+				if($('#id-' + value).html() == '')
+				{
+					z++;
+				}
+			}
+		);
+		var END_POINTS = (z * 5);
+        $('#prot_area').prepend('<p>Actual Points: <strong>' + END_POINTS  + '</strong></p>');
+        if(z >= 6){
+			END_POINTS = END_POINTS + 50;
+            $('#prot_area').prepend('<p>Game Bonus <strong>+50 Points.</strong></p>');
+            $('#prot_area').prepend('<p>Actual Points: <strong>' + END_POINTS  + '</p>');
+		} else if(z >= 11){
+			END_POINTS = END_POINTS + 100;
+            $('#prot_area').prepend('<p>Game Bonus <strong>+100 Points.</strong></p>');
+            $('#prot_area').prepend('<p>Actual Points: <strong>' + END_POINTS  + '</p>');
+		} else if(z >= 16){
+			END_POINTS = END_POINTS + 150;
+            $('#prot_area').prepend('<p>Game Bonus <strong>+150 Points.</strong></p>');
+            $('#prot_area').prepend('<p>Actual Points: <strong>' + END_POINTS  + '</p>');
+		} else if(z >= 26){
+			END_POINTS = END_POINTS + 250;
+            $('#prot_area').prepend('<p>Game Bonus <strong>+250 Points.</strong></p>');
+            $('#prot_area').prepend('<p>Actual Points: <strong>' + END_POINTS  + '</p>');
+		}
+        $('#points').html(END_POINTS);
+        OBSERVER();
+	}; // EOF CLEANUP
+    ;seekAndDestroy = function(ROW,CELL,CONTENT)
+	{
+        var row_plus 	= (Number(ROW)+1);
+        var row_minus 	= (Number(ROW)-1);
+        var cell_plus 	= (Number(CELL)+1);
+        var cell_minus  = (Number(CELL)-1);
+        var SUCCESS     = 0;
+        
+        for (row_plus; row_plus <= 10; row_plus++)
+        {
+            var new_content = $('#id-' + row_plus + '-' + CELL).html();
+            console.log('1 | ROW: ' + row_plus + ' CELL: ' + CELL + ' CONTENT: ' + new_content);
+            if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content != CONTENT){
+                break;
+            } else if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content == CONTENT){
+                $('#id-' + row_plus + '-' + CELL).css('background-color','#ff0066');
+                SUCCESS++;
+            } else {
+                break;
+            }
+        };
+        for (cell_plus; cell_plus <= 10; cell_plus++)
+        {
+            var new_content = $('#id-' + ROW + '-' + cell_plus).html();
+            console.log('2 | ROW: ' + ROW + ' CELL: ' + cell_plus + ' CONTENT: ' + new_content);
+            if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content != CONTENT){
+                break;
+            } else if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content == CONTENT){
+                $('#id-' + ROW + '-' + cell_plus).css('background-color','#ff0066');
+                SUCCESS++;
+            } else {
+                break;
+            }
+        };
+        for (row_minus; row_minus >= 1; row_minus--)
+        {
+            var new_content = $('#id-' + row_minus + '-' + CELL).html();
+            console.log('3 | ROW: ' + row_minus + ' CELL: ' + CELL + ' CONTENT: ' + new_content);
+            if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content != CONTENT){
+                break;
+            } else if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content == CONTENT){
+                $('#id-' + row_minus + '-' + CELL).css('background-color','#ff0066');
+                SUCCESS++;
+            } else {
+                break;
+            }
+        };
+        for (cell_minus; cell_minus <= 10; cell_minus++)
+        {
+            var new_content = $('#id-' + ROW + '-' + cell_minus).html();
+            console.log('4 | ROW: ' + ROW + ' CELL: ' + cell_minus + ' CONTENT: ' + new_content);
+            if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content != CONTENT){
+                break;
+            } else if(typeof new_content != 'undefined' && typeof CONTENT != 'undefined' && new_content == CONTENT){
+                $('#id-' + ROW + '-' + cell_minus).css('background-color','#ff0066');
+                SUCCESS++;
+            } else {
+                break;
+            }
+        };
+        if(SUCCESS > 0)
+        {
+            $(this).css('background-color','#0000ff');
+        }
+    } // EOF seekAndDestroy();
+    ;OBSERVER = function()
+    {
+        setTimeout(function()
+        { 
+            var MATRIX  = $('.cell').toArray()
+            var SUCCESS = 0;
+            $.each(MATRIX, function(index, value)
+                {
+                    var id          = $(this).attr('id');
+                    var content     = $('#' + id).html();
+                    var splitter    = id.split('-');
+                    var ROW         = splitter[1];
+                    var CELL        = splitter[2];
+                    var row_plus 	= (Number(splitter[1])+1);
+                    var row_minus 	= (Number(splitter[1])-1);
+                    var cell_plus 	= (Number(splitter[2])+1);
+                    var cell_minus  = (Number(splitter[2])-1);
+                    for (row_plus; row_plus <= 10; row_plus++)
+                    {
+                        var new_content = $('#id-' + row_plus + '-' + CELL).html();
+                        console.log('1 | ROW: ' + row_plus + ' CELL: ' + CELL + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                    for (cell_plus; cell_plus <= 10; cell_plus++)
+                    {
+                        var new_content = $('#id-' + ROW + '-' + cell_plus).html();
+                        console.log('2 | ROW: ' + ROW + ' CELL: ' + cell_plus + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                    for (row_minus; row_minus >= 1; row_minus--)
+                    {
+                        var new_content = $('#id-' + row_minus + '-' + CELL).html();
+                        console.log('3 | ROW: ' + row_minus + ' CELL: ' + CELL + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                    for (cell_minus; cell_minus <= 10; cell_minus++)
+                    {
+                        var new_content = $('#id-' + ROW + '-' + cell_minus).html();
+                        console.log('4 | ROW: ' + ROW + ' CELL: ' + cell_minus + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                }
+            );
+            if(SUCCESS == 0)
+            {
+                $('#prot_area').prepend('<p>*******************************</p>');
+                $('#prot_area').prepend('<p>*******GAME OVER*******</p>');
+                $('#prot_area').prepend('<p>*******************************</p>');
+                alert('*******GAME OVER*******');
+            }
+        },100);
+    } // EOF OBSERVER
+    ;playforme = function()
+    {
+        setTimeout(function()
+        { 
+            var MATRIX = $('.cell').toArray()
+            $.each(MATRIX, function(index, value)
+                {
+                    var id          = $(this).attr('id');
+                    var content     = $('#' + id).html();
+                    var splitter    = id.split('-');
+                    var ROW         = splitter[1];
+                    var CELL        = splitter[2];
+                    var row_plus 	= (Number(splitter[1])+1);
+                    var row_minus 	= (Number(splitter[1])-1);
+                    var cell_plus 	= (Number(splitter[2])+1);
+                    var cell_minus  = (Number(splitter[2])-1);
+                    var SUCCESS     = 0;
+                    for (row_plus; row_plus <= 10; row_plus++)
+                    {
+                        var new_content = $('#id-' + row_plus + '-' + CELL).html();
+                        console.log('1 | ROW: ' + row_plus + ' CELL: ' + CELL + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            $('#id-' + row_plus + '-' + CELL).css('background-color','#ff0066');
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                    for (cell_plus; cell_plus <= 10; cell_plus++)
+                    {
+                        var new_content = $('#id-' + ROW + '-' + cell_plus).html();
+                        console.log('2 | ROW: ' + ROW + ' CELL: ' + cell_plus + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            $('#id-' + ROW + '-' + cell_plus).css('background-color','#ff0066');
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                    for (row_minus; row_minus >= 1; row_minus--)
+                    {
+                        var new_content = $('#id-' + row_minus + '-' + CELL).html();
+                        console.log('3 | ROW: ' + row_minus + ' CELL: ' + CELL + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            $('#id-' + row_minus + '-' + CELL).css('background-color','#ff0066');
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                    for (cell_minus; cell_minus <= 10; cell_minus++)
+                    {
+                        var new_content = $('#id-' + ROW + '-' + cell_minus).html();
+                        console.log('4 | ROW: ' + ROW + ' CELL: ' + cell_minus + ' CONTENT: ' + new_content);
+                        if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content != content){
+                            break;
+                        } else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != '' && content != '' && new_content == content){
+                            $('#id-' + ROW + '-' + cell_minus).css('background-color','#ff0066');
+                            SUCCESS++;
+                        } else {
+                            break;
+                        }
+                    };
+                }
+            );
+        },100);
+    } // EOF playforme
+    ;$(function()
+		{
+			// INIT
+            var TABLECELLS = $('.cell').toArray()
+			$.each(TABLECELLS, function(index, value)
+				{
+					var CELL_VALUES = [1,2,3,4,5,6,7,8,9,10];
+					CELL_VALUES.shuffle();
+					var id = $(this).attr('id');
+					var splitted = id.split('-');
+					var NEW_CELL_CONTENT = CELL_VALUES[2];
+					if(NEW_CELL_CONTENT.length == 1)
+					{
+						NEW_CELL_CONTENT = '&#160;' + NEW_CELL_CONTENT;
+					}
+					$(this).html(CELL_VALUES[2]);
+				}
+			);
+            // INIT
+            // COMPUTER VS. COMPUTER
+            $('#playforme').on('click',function()
+                {
+                    playforme();
+                    return false;
+                }
+            );
+            // COMPUTER VS. COMPUTER
+            // CLICK ACTION PLAYING DA GAME
+			$('td').on('click',function()
+				{
+                    console.log('- - - - - - - - - - - - - - - - - - - -');
+					var ACT_POINTS = Number($('#points').html());
+					if($(this).css('background-color') == 'rgb(255, 0, 102)'){
+						if(Number(ACT_POINTS) >= 5){
+							ACT_POINTS = (Number(ACT_POINTS) - 5);
+						}
+						$('#points').html(ACT_POINTS);						
+						return false;
+					} else {
+						var id 		= $(this).attr('id').split('-');
+						var row 	= id[1];
+						var cell 	= id[2];
+						var content = $(this).html();
+                        console.log('0 | ROW: ' + row + ' CELL: ' + cell + ' CONTENT: ' + content);
+						var row_plus 	= (Number(row)+1);
+						var row_minus 	= (Number(row)-1);
+						var cell_plus 	= (Number(cell)+1);
+						var cell_minus  = (Number(cell)-1);
+						var SUCCESS     = 0;
+						for (row_plus; row_plus <= 10; row_plus++)
+                        {
+							var new_content = $('#id-' + row_plus + '-' + cell).html();
+                            console.log('1 | ROW: ' + row_plus + ' CELL: ' + cell + ' CONTENT: ' + new_content);
+							if(typeof new_content != 'undefined' && new_content != content){
+								break;
+							} else if(typeof new_content != 'undefined' && new_content == content){
+								$('#id-' + row_plus + '-' + cell).css('background-color','#ff0066');
+								SUCCESS++;
+                                seekAndDestroy(row_plus,cell,content);
+							} else {
+                                break;
+                            }
+                        };
+						for (cell_plus; cell_plus <= 10; cell_plus++)
+                        {
+							var new_content = $('#id-' + row + '-' + cell_plus).html();
+                            console.log('2 | ROW: ' + row + ' CELL: ' + cell_plus + ' CONTENT: ' + new_content);
+							if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != content){
+								break;
+							} else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content == content){
+								$('#id-' + row + '-' + cell_plus).css('background-color','#ff0066');
+								SUCCESS++;
+                                seekAndDestroy(row,cell_plus,content);
+							} else {
+                                break;
+                            }
+						};
+                        for (row_minus; row_minus >= 1; row_minus--)
+                        {
+							var new_content = $('#id-' + row_minus + '-' + cell).html();
+                            console.log('3 | ROW: ' + row_minus + ' CELL: ' + cell + ' CONTENT: ' + new_content);
+							if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != content){
+								break;
+							} else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content == content){
+								$('#id-' + row_minus + '-' + cell).css('background-color','#ff0066');
+								SUCCESS++;
+                                seekAndDestroy(row_minus,cell,content);
+							} else {
+                                break;
+                            }
+						};
+                        for (cell_minus; cell_minus <= 10; cell_minus++)
+                        {
+							var new_content = $('#id-' + row + '-' + cell_minus).html();
+                            console.log('4 | ROW: ' + row + ' CELL: ' + cell_minus + ' CONTENT: ' + new_content);
+							if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content != content){
+								break;
+							} else if(typeof new_content != 'undefined' && typeof content != 'undefined' && new_content == content){
+								$('#id-' + row + '-' + cell_minus).css('background-color','#ff0066');
+								SUCCESS++;
+                                seekAndDestroy(row,cell_minus,content);
+							} else {
+                                break;
+                            }
+						};
+                        if(SUCCESS > 0)
+                        {
+							$(this).css('background-color','#ff0066');
+                            $('#prot_area').prepend('<p>You\'ve just clicked Number <strong>' + content  + '</strong>.</p>');
+							cleanUp();
+						}
+						return false;
+					}
+				}
+			);
+		}
+	);
+</script>
+
+</body>
+</html>
