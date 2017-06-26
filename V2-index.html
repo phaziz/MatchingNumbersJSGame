@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to da Game! Find a pair of Numbers to start... I'm waiting...</title>
+	<style type="text/css">
+		body{font-family: sans-serif;font-size: 15px;font-weight: 100;}
+		div#points_area{margin-top: 25px;text-align:center;font-weight: 900;}
+		table{margin: 25px auto;border: 3px solid #222;}
+		td{height: 50px;width: 50px;text-align:center;font-weight: 900;background: #222;color: #fff;}
+        div#prot_area{border:3px solid #222;padding: 10px 10px 10px 10px;margin: 0 auto;height: 130px!important;max-height: 130px!important;overflow: auto;width: 520px;text-align:left;line-height: 12px; font-size: 11px;font-weight: 100;background: #fff;color: #222;}
+		td:hover{cursor: pointer;}
+		a:link,a:visited,a:active{color:#222;text-decoration:none;}
+		a:hover{color:#ff0066;text-decoration:none;}
+	</style>
+</head>
+<body>
+	<div id="points_area"><span id="points">0</span> Points | <a href="index.html">New Game</a></div>
+	
+	<table id="game" border="0">
+		<tr>
+			<td class="cell" id="id-1-1"></td>
+			<td class="cell" id="id-1-2"></td>
+			<td class="cell" id="id-1-3"></td>
+			<td class="cell" id="id-1-4"></td>
+			<td class="cell" id="id-1-5"></td>
+			<td class="cell" id="id-1-6"></td>
+			<td class="cell" id="id-1-7"></td>
+			<td class="cell" id="id-1-8"></td>
+			<td class="cell" id="id-1-9"></td>
+			<td class="cell" id="id-1-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-2-1"></td>
+			<td class="cell" id="id-2-2"></td>
+			<td class="cell" id="id-2-3"></td>
+			<td class="cell" id="id-2-4"></td>
+			<td class="cell" id="id-2-5"></td>
+			<td class="cell" id="id-2-6"></td>
+			<td class="cell" id="id-2-7"></td>
+			<td class="cell" id="id-2-8"></td>
+			<td class="cell" id="id-2-9"></td>
+			<td class="cell" id="id-2-10"></td>
+		<tr>
+			<td class="cell" id="id-3-1"></td>
+			<td class="cell" id="id-3-2"></td>
+			<td class="cell" id="id-3-3"></td>
+			<td class="cell" id="id-3-4"></td>
+			<td class="cell" id="id-3-5"></td>
+			<td class="cell" id="id-3-6"></td>
+			<td class="cell" id="id-3-7"></td>
+			<td class="cell" id="id-3-8"></td>
+			<td class="cell" id="id-3-9"></td>
+			<td class="cell" id="id-3-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-4-1"></td>
+			<td class="cell" id="id-4-2"></td>
+			<td class="cell" id="id-4-3"></td>
+			<td class="cell" id="id-4-4"></td>
+			<td class="cell" id="id-4-5"></td>
+			<td class="cell" id="id-4-6"></td>
+			<td class="cell" id="id-4-7"></td>
+			<td class="cell" id="id-4-8"></td>
+			<td class="cell" id="id-4-9"></td>
+			<td class="cell" id="id-4-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-5-1"></td>
+			<td class="cell" id="id-5-2"></td>
+			<td class="cell" id="id-5-3"></td>
+			<td class="cell" id="id-5-4"></td>
+			<td class="cell" id="id-5-5"></td>
+			<td class="cell" id="id-5-6"></td>
+			<td class="cell" id="id-5-7"></td>
+			<td class="cell" id="id-5-8"></td>
+			<td class="cell" id="id-5-9"></td>
+			<td class="cell" id="id-5-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-6-1"></td>
+			<td class="cell" id="id-6-2"></td>
+			<td class="cell" id="id-6-3"></td>
+			<td class="cell" id="id-6-4"></td>
+			<td class="cell" id="id-6-5"></td>
+			<td class="cell" id="id-6-6"></td>
+			<td class="cell" id="id-6-7"></td>
+			<td class="cell" id="id-6-8"></td>
+			<td class="cell" id="id-6-9"></td>
+			<td class="cell" id="id-6-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-7-1"></td>
+			<td class="cell" id="id-7-2"></td>
+			<td class="cell" id="id-7-3"></td>
+			<td class="cell" id="id-7-4"></td>
+			<td class="cell" id="id-7-5"></td>
+			<td class="cell" id="id-7-6"></td>
+			<td class="cell" id="id-7-7"></td>
+			<td class="cell" id="id-7-8"></td>
+			<td class="cell" id="id-7-9"></td>
+			<td class="cell" id="id-7-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-8-1"></td>
+			<td class="cell" id="id-8-2"></td>
+			<td class="cell" id="id-8-3"></td>
+			<td class="cell" id="id-8-4"></td>
+			<td class="cell" id="id-8-5"></td>
+			<td class="cell" id="id-8-6"></td>
+			<td class="cell" id="id-8-7"></td>
+			<td class="cell" id="id-8-8"></td>
+			<td class="cell" id="id-8-9"></td>
+			<td class="cell" id="id-8-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-9-1"></td>
+			<td class="cell" id="id-9-2"></td>
+			<td class="cell" id="id-9-3"></td>
+			<td class="cell" id="id-9-4"></td>
+			<td class="cell" id="id-9-5"></td>
+			<td class="cell" id="id-9-6"></td>
+			<td class="cell" id="id-9-7"></td>
+			<td class="cell" id="id-9-8"></td>
+			<td class="cell" id="id-9-9"></td>
+			<td class="cell" id="id-9-10"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="id-10-1"></td>
+			<td class="cell" id="id-10-2"></td>
+			<td class="cell" id="id-10-3"></td>
+			<td class="cell" id="id-10-4"></td>
+			<td class="cell" id="id-10-5"></td>
+			<td class="cell" id="id-10-6"></td>
+			<td class="cell" id="id-10-7"></td>
+			<td class="cell" id="id-10-8"></td>
+			<td class="cell" id="id-10-9"></td>
+			<td class="cell" id="id-10-10"></td>
+		</tr>
+	</table>
+		
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script>
+
+		use: 'strict';
+		
+		;Array.prototype.shuffle = function ()
+		{
+			var i = this.length, j, temp;
+			if (i == 0) return;
+			while (--i)
+			{
+				j          = Math.floor(Math.random()*(i + 1));
+				temp       = this[i];
+				this[i]    = this[j];
+				this[j]    = temp;
+			}
+		};
+
+		;Searcher = function()
+		{
+			Cleaner();
+			var Match = 0;
+			var RightPartner = '';
+			var LeftPartner = '';
+			var TopPartner = '';
+			var BottomPartner = '';
+			var sor = '';
+			var sol = '';
+			var sur = '';
+			var sul = '';
+			
+			for (var z = 1; z <= 10; z++)
+			{
+				for (var y = 1; y <= 10; y++)
+				{
+					var Needle = $('#id-' + z + '-' + y).html();
+				
+					if(Needle != '' && typeof Needle != 'undefined')
+					{
+						// Zeile Rechts
+						RightPartner = '';
+						RightPartner = $('#id-' + z + '-' + (y + 1)).html();
+						
+						if(typeof RightPartner != 'undefined' && RightPartner != '' && Needle == RightPartner)
+						{
+							Match++;
+						}
+						
+						// Zeile Links
+						LeftPartner = '';
+						LeftPartner = $('#id-' + z + '-' + (y - 1)).html();
+						
+						if(typeof LeftPartner != 'undefined' && LeftPartner != '' && Needle == LeftPartner)
+						{
+							Match++;
+						}
+						
+						// Zeile oben
+						TopPartner = '';
+						TopPartner = $('#id-' + (z - 1) + '-' + y).html();
+						
+						if(typeof TopPartner != 'undefined' && TopPartner != '' && Needle == TopPartner)
+						{
+							Match++;
+						}
+						
+						// Zeile unten
+						BottomPartner = '';
+						BottomPartner = $('#id-' + (z + 1) + '-' + y).html();
+						
+						if(typeof BottomPartner != 'undefined' && BottomPartner != '' && Needle == BottomPartner)
+						{
+							Match++;
+						}
+						
+						// Schräg oben rechts
+						sor = '';
+						sor = $('#id-' + (z - 1) + '-' + (y + 1)).html();
+						
+						if(typeof sor != 'undefined' && sor != '' && Needle == sor)
+						{
+							Match++;
+						}
+						
+						// Schräg oben links
+						sol = '';
+						sol = $('#id-' + (z - 1) + '-' + (y - 1)).html();
+						
+						if(typeof sol != 'undefined' && sol != '' && Needle == sol)
+						{
+							Match++;
+						}
+						
+						// Schräg unten rechts
+						sur = '';
+						sur = $('#id-' + (z + 1) + '-' + (y + 1)).html();
+						
+						if(typeof sur != 'undefined' && sur != '' && Needle == sur)
+						{
+							Match++;
+						}
+						
+						// Schräg unten links
+						sul = '';
+						sul = $('#id-' + (z + 1) + '-' + (y - 1)).html();
+						
+						if(typeof sul != 'undefined' && sul != '' && Needle == sul)
+						{
+							Match++;
+						}
+					}
+				}
+			}
+			
+			console.log('Match: ' + (Match / 2));
+			
+			if(Match == 0)
+			{
+				alert("*** Game Over ***");
+			}
+		}
+		
+		;CopyFromAbove = function (Row, Field)
+		{
+			if(Row <= 2)
+			{
+				if($('#id-' + (Row-1) + '-' + Field).html() != '' && typeof $('#id-' + (Row-1) + '-' + Field).html() != 'undefined')
+				{
+					console.log('Row: ' + Row);
+					console.log('Field: ' + Field);
+					
+					console.log('Row-1: ' + (Row - 1));
+					console.log('Field: ' + Field + ', Content: ' + $('#id-' + (Row-1) + '-' + Field).html());
+
+					$('#id-' + Row + '-' + Field).html($('#id-' + (Row-1) + '-' + Field).html());
+					$('#id-' + (Row-1) + '-' + Field).html("");
+					$('#id-' + Row + '-' + Field).css("background-color", '#222');
+				}
+			}
+		};
+
+		;Cleaner = function()
+		{
+			for (var o = 10; o >= 1; o--)
+			{
+				for (var p = 10; p >= 1; p--)
+				{
+					if($('#id-' + o + '-' + p).html() == '' || typeof $('#id-' + o + '-' + p).html() == 'undefined')
+					{						
+						for(var i = o; i >= 0; i--)
+						{
+							var TmpContent = $('#id-' + (i-1) + '-' + p).html();
+							
+							if(TmpContent != '' || typeof TmpContent != 'undefined')
+							{
+								$('#id-' + i + '-' + p).html(TmpContent);
+								$('#id-' + (i-1) + '-' + p).html("");
+							}
+							else
+							{
+								continue;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		;Observer = function()
+		{
+			for (var i = 10; i >= 1; i--)
+			{
+				for (var j = 10; j >= 1; j--)
+				{
+					var BGColor = $('#id-' + i + '-' + j).css("background-color");
+					
+					if(BGColor == "rgb(255, 0, 53)")
+					{
+						$('#id-' + i + '-' + j).html("").css('background','#222');
+					}
+				}
+			}
+			
+			Cleaner();
+		};
+
+		;$(function()
+			{
+				var Min = 1;
+				var Max = 10;
+				var Points = 0;
+				var Cells = $('.cell').toArray()
+			
+				$.each(Cells, function(index, value)
+					{
+						var CELL_VALUES = [1,2,3,4,5,6,7,8,9,10];
+						CELL_VALUES.shuffle();
+						
+						var id = $(this).attr('id');
+						var splitted = id.split('-');
+						var NEW_CELL_CONTENT = CELL_VALUES[2];
+						
+						if(NEW_CELL_CONTENT.length == 1)
+						{
+							NEW_CELL_CONTENT = '&#160;' + NEW_CELL_CONTENT;
+						}
+						
+						$(this).html(CELL_VALUES[2]);
+					}
+				);
+
+				$('.cell').on('click',function()
+					{
+						var clicked = $(this).text();
+						var clickedBG = $(this).css("background-color");
+						
+						if(clicked == '' || clickedBG == 'rgb(255, 0, 53)' || clickedBG == '#ff0035')
+						{
+							return false;
+						}
+						
+						var PrePoints = $('#points').text();
+						var clickedID = $(this).attr("id");
+						var splitted = clickedID.split('-');
+						var Row = splitted[1];
+						var Cell = splitted[2];
+						var Countr = 0;
+
+						// Zeile Rechts
+						for (var i = Cell; i <= Max; i++)
+						{
+							var TempContent = $('#id-' + Row + '-' + i).text();
+							
+							if(TempContent == clicked)
+							{
+								$('#id-' + Row + '-' + i).css("background", '#ff0035');
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+						}
+
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+
+						Countr = 0;
+
+						// Zeile Links
+						for (var i = Cell; i >= Min; i--)
+						{
+							var TempContent = $('#id-' + Row + '-' + i).text();
+							
+							if(TempContent == clicked)
+							{
+								$('#id-' + Row + '-' + i).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+						}
+
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+						
+						Countr = 0;
+						
+						// Reihe hoch
+						for (var i = Row; i >= Min; i--)
+						{
+							var TempContent = $('#id-' + i + '-' + Cell).text();
+							
+							if(TempContent == clicked)
+							{
+								$('#id-' + i + '-' + Cell).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+						}
+
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+						
+						Countr = 0;
+						
+						// Reihe runter
+						for (var i = Row; i <= Max; i++)
+						{
+							var TempContent = $('#id-' + i + '-' + Cell).text();
+							
+							if(TempContent == clicked)
+							{
+								$('#id-' + i + '-' + Cell).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+						}
+
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+						
+						Countr = 0;
+						
+						// Diegonale Rechts Oben
+						var z = Row;
+						var j = Cell;
+						
+						while(z >= Min && j <= Max)
+						{
+							var TempContent = $('#id-' + z + '-' + j).text();
+
+							if(TempContent == clicked)
+							{
+								$('#id-' + z + '-' + j).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+
+							z--;
+							j++;
+						}
+						
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+						
+						Countr = 0;
+
+						// Diegonale Rechts Unten
+						var z = Row;
+						var j = Cell;
+						
+						while(z <= Max && j <= Max)
+						{
+							var TempContent = $('#id-' + z + '-' + j).text();
+							
+							if(TempContent == clicked)
+							{
+								$('#id-' + z + '-' + j).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+
+							z++;
+							j++;
+						}
+						
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+						
+						Countr = 0;
+						
+						// Diegonale Links Oben
+						var z = Row;
+						var j = Cell;
+						
+						while(z >= Min && j >= Min)
+						{
+							var TempContent = $('#id-' + z + '-' + j).text();
+
+							if(TempContent == clicked)
+							{
+								$('#id-' + z + '-' + j).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+
+							z--;
+							j--;
+						}
+						
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+						
+						Countr = 0;
+						
+						// Diegonale Links unten
+						var z = Row;
+						var j = Cell;
+						
+						while(z <= Max && j >= Min)
+						{
+							var TempContent = $('#id-' + z + '-' + j).text();
+							
+							if(TempContent == clicked)
+							{
+								$('#id-' + z + '-' + j).css("background", '#ff0035');
+								
+								Countr ++;
+							}
+							else
+							{
+								break;
+							}
+
+							z++;
+							j--;
+						}
+
+						if(Countr > 1)
+						{
+							Points = Points + (Countr * 10);
+						}
+
+						Countr = 0;
+
+						$('#points').html(Points);
+						
+						if(PrePoints == $('#points').html())
+						{
+							$('#' + clickedID).css('background','#222');
+						}
+						
+						Observer();
+						Cleaner();
+						Searcher();
+					}
+				);
+			}
+		);
+	</script>
+
+</body>
+</html>
